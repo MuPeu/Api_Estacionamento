@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface EstacionamentoRepository extends JpaRepository<Carros, Long> {
+public interface EstacionamentoRepository extends JpaRepository<Carros, String> {
     // Aqui você pode adicionar métodos personalizados se necessário
 }

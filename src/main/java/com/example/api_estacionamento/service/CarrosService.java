@@ -2,7 +2,6 @@ package com.example.api_estacionamento.service;
 
 import com.example.api_estacionamento.model.Carros;
 import com.example.api_estacionamento.repository.EstacionamentoRepository;
-//import com.example.api_estacionamento.controller.EstacionamentoController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +16,7 @@ public class CarrosService {
     private EstacionamentoRepository estacionamentoRepository;
 
     public Carros registrarEntrada(Carros carro) {
+        System.out.println("ID Placa recebido: " + carro.getId());
         carro.setEntrada(LocalDateTime.now());
         return estacionamentoRepository.save(carro);
     }
